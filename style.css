@@ -1,0 +1,341 @@
+/* PENGATURAN DASAR */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #071321;
+    color: #f2f5fa;
+    line-height: 1.7;
+}
+
+/* NAVBAR */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 7%;
+    background-color: #0b192a;
+    border-bottom: 1px solid #203149;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    display: inline-block;
+    background-color: #3478f6;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nama-logo {
+    font-weight: bold;
+    margin-right: auto;
+    margin-left: 12px;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: #aab8ca;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #69a0ff;
+}
+
+/* PENGATURAN SEMUA BAGIAN */
+.halaman {
+    padding: 100px 8%;
+    min-height: 80vh;
+    border-bottom: 1px solid #203149;
+    scroll-margin-top: 75px;
+}
+
+.label {
+    color: #69a0ff;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+h1 {
+    font-size: 58px;
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 34px;
+    margin-bottom: 25px;
+}
+
+h3 {
+    margin-bottom: 10px;
+}
+
+/* HALAMAN BERANDA */
+.beranda {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.teks {
+    max-width: 600px;
+}
+
+.teks h3 {
+    font-size: 19px;
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+
+.deskripsi {
+    color: #aab8ca;
+    margin-bottom: 25px;
+}
+
+/* TOMBOL */
+.tombol {
+    display: inline-block;
+    background-color: #3478f6;
+    color: white;
+    padding: 11px 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 4px 5px 4px 0;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.tombol:hover {
+    background-color: #245fc9;
+    transform: translateY(-2px);
+}
+
+.tombol-garis {
+    background-color: transparent;
+    border: 1px solid #34445b;
+}
+
+.tombol-garis:hover {
+    background-color: #14263d;
+}
+
+/* FOTO PROFIL BERANDA */
+.foto {
+    width: 320px;
+    height: 380px;
+    flex-shrink: 0;
+    overflow: hidden;
+    background-color: #14263d;
+    border: 1px solid #263a55;
+    border-radius: 12px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.foto img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* HALAMAN TENTANG SAYA */
+.tentang-konten {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 35px;
+    align-items: start;
+}
+
+.foto-tentang {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1px solid #263a55;
+    background-color: #14263d;
+}
+
+.foto-tentang img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+.tentang-teks > p {
+    color: #aab8ca;
+    margin-bottom: 15px;
+}
+
+.tentang-teks h3 {
+    margin-bottom: 12px;
+}
+
+/* KARTU */
+.kartu {
+    background-color: #101f32;
+    border: 1px solid #203149;
+    padding: 25px;
+    border-radius: 8px;
+    margin: 15px 0;
+    transition: 0.3s;
+}
+
+.kartu:hover {
+    border-color: #3478f6;
+    transform: translateY(-3px);
+}
+
+.kartu p {
+    color: #aab8ca;
+    font-size: 14px;
+}
+
+/* HALAMAN HOBI */
+.subjudul {
+    color: #aab8ca;
+    margin-top: -12px;
+    margin-bottom: 30px;
+}
+
+.daftar-hobi {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.daftar-hobi .kartu {
+    margin: 0;
+    min-height: 210px;
+}
+
+.ikon {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.kartu-hobi h3 {
+    font-size: 19px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #8293aa;
+    background-color: #0b192a;
+    font-size: 12px;
+}
+
+footer p {
+    margin: 3px 0;
+}
+
+/* TAMPILAN HP DAN TABLET */
+@media (max-width: 800px) {
+    header {
+        padding: 15px 5%;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .nama-logo {
+        font-size: 14px;
+    }
+
+    nav {
+        width: 100%;
+        justify-content: center;
+        gap: 22px;
+    }
+
+    .halaman {
+        padding: 65px 6%;
+    }
+
+    .beranda {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 35px;
+    }
+
+    h1 {
+        font-size: 43px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    .foto {
+        width: 100%;
+        max-width: 350px;
+        height: 350px;
+        align-self: center;
+    }
+
+    .tentang-konten {
+        grid-template-columns: 1fr;
+    }
+
+    .foto-tentang {
+        width: 100%;
+        max-width: 350px;
+        height: 350px;
+        margin: 0 auto;
+    }
+
+    .daftar-hobi {
+        grid-template-columns: 1fr;
+    }
+
+    .daftar-hobi .kartu {
+        min-height: auto;
+    }
+}
+
+/* TAMPILAN HP KECIL */
+@media (max-width: 400px) {
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    nav {
+        gap: 14px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .nama-logo {
+        font-size: 12px;
+    }
+}
